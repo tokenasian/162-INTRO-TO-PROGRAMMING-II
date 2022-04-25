@@ -1,0 +1,17 @@
+# Author: Matthew Armstrong
+# Date: 10/28/2021
+# Description: Write a recursive function named list_max
+# that takes as its parameter a list of numbers
+# and returns the maximum value in the list.
+
+def list_max(num_list):
+    """returns max value in list"""
+    if len(num_list) == 1:
+        return num_list[0]
+    else:
+        return num_list[0] if num_list[0] > list_max(num_list[1:]) else list_max(num_list[1:])
+
+
+# print(list_max([2, 4, 6, 8, 10, 12, 14, 16, 18, 20]))
+# print(list_max([5, 10, 15, 20, 25, 30, 35, 40, 45]))
+# print(list_max([60]))
